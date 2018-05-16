@@ -40,7 +40,10 @@ public class ChromeDriverTest {
         // Create a new instance of the Chrome driver
         // Notice that the remainder of the code relies on the interface,
         // not the implementation.
-        driver = new ChromeDriver();
+        
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless")
+        driver = new ChromeDriver(options);
 
         //maximize window
         driver.manage().window().maximize();
