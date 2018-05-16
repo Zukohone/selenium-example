@@ -41,9 +41,8 @@ public class ChromeDriverTest {
         // Notice that the remainder of the code relies on the interface,
         // not the implementation.
         
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless")
-        driver = new ChromeDriver(options);
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless","--disable-gpu", "--no-sandbox");
 
         //maximize window
         driver.manage().window().maximize();
