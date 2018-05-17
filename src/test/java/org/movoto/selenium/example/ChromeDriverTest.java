@@ -43,7 +43,7 @@ public class ChromeDriverTest {
         // not the implementation.
         
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless","--disable-gpu", "--no-sandbox");
+        chromeOptions.addArguments("--headless --disable-gpu --no-sandbox");
 
         driver = new ChromeDriver(chromeOptions);
 
